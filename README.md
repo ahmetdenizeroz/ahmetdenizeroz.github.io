@@ -5,11 +5,7 @@
         <title>Ahmet Deniz Eroz</title>
     </head>
     <body>
-      
-        <h1>Things Will Get Better In Here Soon</h1>
-        <img 
-         src="https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/blob/main/sokak%20lambas%C4%B1%20deneme%202.png" 
-         alt="Street Lamp" 
-         width="437"/>
+      <h1>Can a shark dance?</h1>
+      <p>I am a fellow Mechanical Enginner who is lost his way for future.</p>
     </body>
 </html>
