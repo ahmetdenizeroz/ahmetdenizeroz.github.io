@@ -1,6 +1,5 @@
 <html>
     <head>
-        <meta charset="uft-8">
         <title>Ahmet Deniz Eroz</title>
     </head>
     <body>
