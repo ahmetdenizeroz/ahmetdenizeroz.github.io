@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <body>
     <h1>Webpage of a Fellow Engineer</h1>
