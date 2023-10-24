@@ -18,8 +18,12 @@ closeModal.onclick = function() {
 
 // Add your images to the grid with appropriate URLs
 const imageUrls = [
-    'image1.jpg',
-    'image2.jpg',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050813.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050828.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050832.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050893.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050932.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/sokak%20lambas%C4%B1%20deneme%202.png',
     // Add more image URLs here
 ];
 
