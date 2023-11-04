@@ -7,14 +7,13 @@
 .gallery-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .gallery img { 
     width: 100%;
     height: auto;
-    align-self: flex-start;
 }
 
 /* Style for the modal (full-screen view) */
