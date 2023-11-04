@@ -24,6 +24,21 @@ const imageUrls = [
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050893.JPG',
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/aP1050932.JPG',
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/sokak%20lambas%C4%B1%20deneme%202.png',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820002.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820007.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820008.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820010.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820014.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820015.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820016.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820020.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820021.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820022.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820028.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820031.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820032.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820033.JPG',
+    'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820036.JPG',
     // Add more image URLs here
 ];
 
