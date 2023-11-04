@@ -39,11 +39,10 @@ const imageUrls = [
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820032.JPG',
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820033.JPG',
     'https://github.com/ahmetdenizeroz/ahmetdenizeroz.github.io/raw/main/84820036.JPG',
-    // Add more image URLs here
 ];
 
 // Get a reference to the gallery container
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery-item');
 
 // Create image elements for each URL and add them to the gallery
 imageUrls.forEach(url => {
