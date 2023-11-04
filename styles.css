@@ -7,7 +7,7 @@
 .gallery img { 
     width: 100%;
     height: auto;
-     align-self: start;
+    align-self: start;
 }
 
 /* Style for the modal (full-screen view) */
