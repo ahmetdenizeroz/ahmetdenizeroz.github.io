@@ -43,7 +43,6 @@ const imageUrls = [
 
 // Get a reference to the gallery container
 const gallery = document.querySelector('.gallery');
-const gallery_1 = document.querySelector('.gallery-item');
 
 // Create image elements for each URL and add them to the gallery
 imageUrls.forEach(url => {
