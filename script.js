@@ -3,10 +3,6 @@ const modal = document.getElementById('modal');
 const modalImage = document.getElementById('modal-image');
 const closeModal = document.getElementById('close-modal');
 
-// Define the names of the low and high-resolution image folders
-const lowResFolder = 'low_res_pics';
-const highResFolder = 'high_res_pics';
-
 // Function to open the modal with a clicked image
 function openModal(highResUrl) {
     modal.style.display = 'block';
@@ -18,23 +14,21 @@ closeModal.onclick = function() {
     modal.style.display = 'none';
 };
 
-// Fetch function to retrieve image URLs from the low-resolution folder
-fetch('get_low_res_images.php')
-    .then(response => response.json())
-    .then(imageUrls => {
-        // Get a reference to the gallery container
-        const gallery = document.querySelector('.gallery');
+// Define low and high-resolution image URLs manually
+const imageUrls = [
+    { lowRes: 'low_res_pics/aP1050893.JPG', highRes: 'high_res_pics/aP1050893.JPG' },
+    { lowRes: 'low_res_pics/aP1050895.JPG', highRes: 'high_res_pics/aP1050895.JPG' },
+    // Add more image URLs as needed
+];
 
-        // Create image elements for each low-resolution URL and add them to the gallery
-        imageUrls.forEach(url => {
-            const image = document.createElement('img');
-            // Construct the URLs for low and high-resolution images using the folder names and image names
-            const lowResUrl = `${lowResFolder}/${url.name}`;
-            const highResUrl = `${highResFolder}/${url.name}`;
-            image.src = lowResUrl;
-            // Attach a click event to open the modal with the corresponding high-resolution image URL
-            image.onclick = () => openModal(highResUrl);
-            gallery.appendChild(image);
-        });
-    })
-    .catch(error => console.error('Error fetching low-resolution images:', error));
+// Get a reference to the gallery container
+const gallery = document.querySelector('.gallery');
+
+// Create image elements for each low-resolution URL and add them to the gallery
+imageUrls.forEach(image => {
+    const imageElement = document.createElement('img');
+    imageElement.src = image.lowRes;
+    // Attach a click event to open the modal with the corresponding high-resolution image URL
+    imageElement.onclick = () => openModal(image.highRes);
+    gallery.appendChild(imageElement);
+});
