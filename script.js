@@ -21,6 +21,13 @@ const imageUrls = [
     // Add more image URLs as needed
 ];
 
+// Sort the imageUrls array based on image dimensions (width x height)
+imageUrls.sort((a, b) => {
+    const sizeA = a.width * a.height;
+    const sizeB = b.width * b.height;
+    return sizeA - sizeB; // Sort in ascending order (smaller images first)
+});
+
 // Get a reference to the gallery container
 const gallery = document.querySelector('.gallery');
 
