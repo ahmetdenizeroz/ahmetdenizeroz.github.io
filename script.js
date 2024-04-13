@@ -28,9 +28,12 @@ fetch('get_low_res_images.php')
         // Create image elements for each low-resolution URL and add them to the gallery
         imageUrls.forEach(url => {
             const image = document.createElement('img');
-            image.src = url.lowRes;
+            // Construct the URLs for low and high-resolution images using the folder names and image names
+            const lowResUrl = `${lowResFolder}/${url.name}`;
+            const highResUrl = `${highResFolder}/${url.name}`;
+            image.src = lowResUrl;
             // Attach a click event to open the modal with the corresponding high-resolution image URL
-            image.onclick = () => openModal(url.highRes);
+            image.onclick = () => openModal(highResUrl);
             gallery.appendChild(image);
         });
     })
