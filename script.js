@@ -33,7 +33,6 @@ const imageUrls = [
     { lowRes: 'low_res_pics/Hor15.jpg', highRes: 'high_res_pics/Hor15.JPG' },
     { lowRes: 'low_res_pics/Hor16.jpg', highRes: 'high_res_pics/Hor16.JPG' },
     { lowRes: 'low_res_pics/Hor17.jpg', highRes: 'high_res_pics/Hor17.png' },
-    { lowRes: 'low_res_pics/Hor18.jpg', highRes: 'high_res_pics/Hor18.JPG' },
     { lowRes: 'low_res_pics/Ver1.JPG', highRes: 'high_res_pics/Ver1.JPG' },
     { lowRes: 'low_res_pics/Ver2.jpg', highRes: 'high_res_pics/Ver2.JPG' },
     { lowRes: 'low_res_pics/Ver3.jpg', highRes: 'high_res_pics/Ver3.JPG' },
