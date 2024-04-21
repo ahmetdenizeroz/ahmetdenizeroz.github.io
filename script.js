@@ -16,9 +16,40 @@ closeModal.onclick = function() {
 
 // Define low and high-resolution image URLs manually
 const imageUrls = [
-    { lowRes: 'low_res_pics/aP1050893.JPG', highRes: 'high_res_pics/aP1050893.JPG' },
-    { lowRes: 'low_res_pics/aP1050895.JPG', highRes: 'high_res_pics/aP1050895.JPG' },
-    // Add more image URLs as needed
+    { lowRes: 'low_res_pics/Hor1.JPG', highRes: 'high_res_pics/Hor1.JPG' },
+    { lowRes: 'low_res_pics/Hor2.JPG', highRes: 'high_res_pics/Hor2.JPG' },
+    { lowRes: 'low_res_pics/Hor3.JPG', highRes: 'high_res_pics/Hor3.JPG' },
+    { lowRes: 'low_res_pics/Hor4.JPG', highRes: 'high_res_pics/Hor4.JPG' },
+    { lowRes: 'low_res_pics/Hor5.JPG', highRes: 'high_res_pics/Hor5.JPG' },
+    { lowRes: 'low_res_pics/Hor6.JPG', highRes: 'high_res_pics/Hor6.JPG' },
+    { lowRes: 'low_res_pics/Hor7.JPG', highRes: 'high_res_pics/Hor7.JPG' },
+    { lowRes: 'low_res_pics/Hor8.JPG', highRes: 'high_res_pics/Hor8.JPG' },
+    { lowRes: 'low_res_pics/Hor9.JPG', highRes: 'high_res_pics/Hor9.JPG' },
+    { lowRes: 'low_res_pics/Hor10.JPG', highRes: 'high_res_pics/Hor10.JPG' },
+    { lowRes: 'low_res_pics/Hor11.JPG', highRes: 'high_res_pics/Hor11.JPG' },
+    { lowRes: 'low_res_pics/Hor12.JPG', highRes: 'high_res_pics/Hor12.JPG' },
+    { lowRes: 'low_res_pics/Hor13.JPG', highRes: 'high_res_pics/Hor13.JPG' },
+    { lowRes: 'low_res_pics/Hor14.JPG', highRes: 'high_res_pics/Hor14.JPG' },
+    { lowRes: 'low_res_pics/Hor15.JPG', highRes: 'high_res_pics/Hor15.JPG' },
+    { lowRes: 'low_res_pics/Hor16.JPG', highRes: 'high_res_pics/Hor16.JPG' },
+    { lowRes: 'low_res_pics/Hor17.JPG', highRes: 'high_res_pics/Hor17.JPG' },
+    { lowRes: 'low_res_pics/Hor18.JPG', highRes: 'high_res_pics/Hor18.JPG' },
+    { lowRes: 'low_res_pics/Ver1.JPG', highRes: 'high_res_pics/Ver1.JPG' },
+    { lowRes: 'low_res_pics/Ver2.JPG', highRes: 'high_res_pics/Ver2.JPG' },
+    { lowRes: 'low_res_pics/Ver3.JPG', highRes: 'high_res_pics/Ver3.JPG' },
+    { lowRes: 'low_res_pics/Ver4.JPG', highRes: 'high_res_pics/Ver4.JPG' },
+    { lowRes: 'low_res_pics/Ver5.JPG', highRes: 'high_res_pics/Ver5.JPG' },
+    { lowRes: 'low_res_pics/Ver6.JPG', highRes: 'high_res_pics/Ver6.JPG' },
+    { lowRes: 'low_res_pics/Ver7.JPG', highRes: 'high_res_pics/Ver7.JPG' },
+    { lowRes: 'low_res_pics/Ver8.JPG', highRes: 'high_res_pics/Ver8.JPG' },
+    { lowRes: 'low_res_pics/Ver9.JPG', highRes: 'high_res_pics/Ver9.JPG' },
+    { lowRes: 'low_res_pics/Ver10.JPG', highRes: 'high_res_pics/Ver10.JPG' },
+    { lowRes: 'low_res_pics/Ver11.JPG', highRes: 'high_res_pics/Ver11.JPG' },
+    { lowRes: 'low_res_pics/Ver12.JPG', highRes: 'high_res_pics/Ver12.JPG' },
+    { lowRes: 'low_res_pics/Ver13.JPG', highRes: 'high_res_pics/Ver13.JPG' },
+    { lowRes: 'low_res_pics/Ver14.JPG', highRes: 'high_res_pics/Ver14.JPG' },
+
+
 ];
 
 // Sort the imageUrls array based on image dimensions (width x height)
