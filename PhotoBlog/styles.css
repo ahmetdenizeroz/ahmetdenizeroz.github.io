@@ -1,20 +1,13 @@
 /* styles.css */
 
-audio {
-    display: block;
-    width: 100%;
-    z-index: 2;
-    position: relative;
-}
-
 /* Style for the GIF */
 .background-gif {
     display: block;
     width: 100%;
     height: auto;
-    z-index: 1; /* Ensure it stays behind other content */
-    margin-top: 10px; /* Adjust based on your preference */
-    margin-bottom: calc(100vh - 316px); /* Adjust for audio height and GIF height */
+    max-width: 544px; /* Set maximum width */
+    max-height: 306px; /* Set maximum height */
+    margin: 50px auto; /* Center the GIF horizontally with top and bottom margins */
     
 .gallery {
     display: grid;
