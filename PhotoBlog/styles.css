@@ -13,6 +13,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 10px;
+    padding-top: 330px; /* Adjust to match the height of the GIF plus its top margin */
+    position: relative; /* Make the gallery container a positioned parent */
 }
 
 .gallery-item {
