@@ -40,6 +40,8 @@ const imageUrls = [
     { lowRes: 'low_res_pics/Hor22.jpg', highRes: 'high_res_pics/Hor22.JPG' },
     { lowRes: 'low_res_pics/Hor23.jpg', highRes: 'high_res_pics/Hor23.JPG' },
     { lowRes: 'low_res_pics/Hor24.jpg', highRes: 'high_res_pics/Hor24.JPG' },
+    { lowRes: 'low_res_pics/Hor25.jpg', highRes: 'high_res_pics/Hor25.JPG' },
+    { lowRes: 'low_res_pics/Hor26.jpg', highRes: 'high_res_pics/Hor26.JPG' },
     
     { lowRes: 'low_res_pics/Ver1.JPG', highRes: 'high_res_pics/Ver1.JPG' },
     { lowRes: 'low_res_pics/Ver2.jpg', highRes: 'high_res_pics/Ver2.JPG' },
@@ -60,6 +62,7 @@ const imageUrls = [
     { lowRes: 'low_res_pics/Ver17.jpg', highRes: 'high_res_pics/Ver17.JPG' },
     { lowRes: 'low_res_pics/Ver18.jpg', highRes: 'high_res_pics/Ver18.JPG' },
     { lowRes: 'low_res_pics/Ver19.jpg', highRes: 'high_res_pics/Ver19.JPG' },
+    { lowRes: 'low_res_pics/Ver20.jpg', highRes: 'high_res_pics/Ver20.JPG' },
 
 
 ];
