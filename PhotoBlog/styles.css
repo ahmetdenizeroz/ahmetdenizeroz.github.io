@@ -1,31 +1,94 @@
+body {
+    background-image: url('Background/bg1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
 .background-gif {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 544px; /* Set maximum width */
-    max-height: 306px; /* Set maximum height */
-    margin: 100px auto; /* Center the GIF horizontally with top and bottom margins */
+    max-width: 544px;
+    max-height: 306px;
+    margin: 100px auto;
 }
 
 .gallery {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
 }
 
 .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.gallery img { 
+.gallery img {
     width: 100%;
     height: auto;
+    display: block;
+    object-fit: contain;
 }
 
-/* Style for the modal (full-screen view) */
+/* 3 columns */
+@media (max-width: 1100px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 2 columns */
+@media (max-width: 740px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 column */
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fallback for older browsers */
+@supports not (display: grid) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .gallery-item {
+        flex: 1 1 calc(25% - 5px); /* 4 columns */
+        min-width: 200px;
+    }
+    @media (max-width: 1100px) {
+        .gallery-item {
+            flex: 1 1 calc(33.33% - 5px); /* 3 columns */
+            min-width: 0;
+        }
+    }
+    @media (max-width: 740px) {
+        .gallery-item {
+            flex: 1 1 calc(50% - 5px); /* 2 columns */
+            min-width: 0;
+        }
+    }
+    @media (max-width: 500px) {
+        .gallery-item {
+            flex: 1 1 100%; /* 1 column */
+            min-width: 0;
+        }
+    }
+}
+
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -37,17 +100,22 @@
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Style for the close button and modal image */
 .close {
     position: absolute;
     top: 15px;
     right: 35px;
     color: #fff;
     font-size: 30px;
+    cursor: pointer;
 }
+
 .modal-content {
     display: block;
     margin: 0 auto;
     max-width: 90%;
     max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
