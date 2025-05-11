@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photograph Groups</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        const imageUrls = [
+            { lowRes: "Group1/low_res_pics/Hor1.JPG", highRes: "Group1/high_res_pics/Hor1.JPG", width: 400, height: 267, group: "heidelberg", redirectTo: "Group1/Photographs.html" },
+            { lowRes: "Group1/low_res_pics/Hor13.JPG", highRes: "Group1/high_res_pics/Hor13.JPG", width: 400, height: 267, group: "paris", redirectTo: "paris/paris.html" },
+            { lowRes: "Group1/low_res_pics/Ver1.JPG", highRes: "Group1/high_res_pics/Ver1.JPG", width: 400, height: 600, group: "tokyo", redirectTo: "tokyo/tokyo.html" },
+            { lowRes: "Group1/low_res_pics/Ver13.JPG", highRes: "Group1/high_res_pics/Ver13.JPG", width: 400, height: 600, group: "kyoto", redirectTo: "kyoto/kyoto.html" }
+        ];
+    </script>
+</head>
+<body>
+    <img src="Video/3.gif" class="background-gif" alt="Background GIF">
+
+    <div class="gallery">
+        <!-- Cover images populated by script.js -->
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close-modal">×</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
