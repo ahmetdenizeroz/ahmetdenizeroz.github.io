@@ -19,14 +19,15 @@ closeModal.onclick = function() {
     modal.style.display = 'none';
 };
 
-// Shuffle the imageUrls array to randomize the order (optional for covers)
-//imageUrls.sort(() => Math.random() - 0.5);
-
 function debounce(func, wait) {
     let timeout;
-    return function (...args) {
+    return function() {
+        const context = this;
+        const args = arguments;
         clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
+        timeout = setTimeout(function() {
+            func.apply(context, args);
+        }, wait);
     };
 }
 
@@ -45,9 +46,6 @@ function calculateLayoutParameters() {
     else if (availableWidth <= screenQuarter * 3) {
         columnCount = 3;
     }
-    //else {
-    //    columnCount = 4;
-    //}
 
     // Calculate required gaps (n-1 gaps between n columns)
     const totalGaps = (columnCount - 1) * gap;
@@ -92,28 +90,36 @@ function positionItems() {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
         
-        // Create image element
+        // Create main image element
         const imageElement = document.createElement('img');
         imageElement.src = item.lowRes;
         imageElement.alt = `Cover for ${item.group || 'Group'}`;
         imageElement.loading = 'lazy';
         imageElement.onclick = () => {
             if (item.redirectTo) {
-                // Redirect to the explicitly defined group page
                 window.location.href = item.redirectTo;
             } else {
                 openModal(item.highRes);
             }
         };
         
+        // Create overlay image element
+        const overlayImage = document.createElement('img');
+        overlayImage.src = item.overlay || 'overlays/default-overlay.png'; // Fallback to default overlay
+        overlayImage.className = 'overlay-image';
+        overlayImage.alt = 'Overlay';
+        overlayImage.loading = 'lazy'; // Optimize loading
+        
+        // Append both images to the gallery item
+        galleryItem.appendChild(imageElement);
+        galleryItem.appendChild(overlayImage);
+        gallery.appendChild(galleryItem);
+        
         // Position and size the item
         galleryItem.style.width = `${itemWidth}px`;
         galleryItem.style.height = `${itemHeight}px`;
         galleryItem.style.left = `${left}px`;
         galleryItem.style.top = `${top}px`;
-        
-        galleryItem.appendChild(imageElement);
-        gallery.appendChild(galleryItem);
         
         // Update column height
         columnHeights[shortestColumn] += itemHeight + gap;
