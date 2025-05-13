@@ -1,0 +1,21 @@
+const imageUrls = [
+    { lowRes: "low_res_pics/Hor1.JPG", highRes: "high_res_pics/Hor1.JPG", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Hor17.png", highRes: "high_res_pics/Hor17.png", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Hor18.JPG", highRes: "high_res_pics/Hor18.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/Hor19.JPG", highRes: "high_res_pics/Hor19.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor2.JPG", highRes: "high_res_pics/Hor2.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor20.JPG", highRes: "high_res_pics/Hor20.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/Hor25.JPG", highRes: "high_res_pics/Hor25.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/Hor3.JPG", highRes: "high_res_pics/Hor3.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor4.JPG", highRes: "high_res_pics/Hor4.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor5.JPG", highRes: "high_res_pics/Hor5.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor6.JPG", highRes: "high_res_pics/Hor6.JPG", width: 400, height: 265 },
+    { lowRes: "low_res_pics/Hor7.JPG", highRes: "high_res_pics/Hor7.JPG", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Hor8.JPG", highRes: "high_res_pics/Hor8.JPG", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Hor9.JPG", highRes: "high_res_pics/Hor9.JPG", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Ver1.JPG", highRes: "high_res_pics/Ver1.JPG", width: 400, height: 532 },
+    { lowRes: "low_res_pics/Ver18.JPG", highRes: "high_res_pics/Ver18.JPG", width: 400, height: 532 },
+    { lowRes: "low_res_pics/Ver19.JPG", highRes: "high_res_pics/Ver19.JPG", width: 400, height: 532 },
+    { lowRes: "low_res_pics/Ver20.JPG", highRes: "high_res_pics/Ver20.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/Ver3.JPG", highRes: "high_res_pics/Ver3.JPG", width: 400, height: 603 }
+];
