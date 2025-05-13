@@ -37,7 +37,7 @@ function calculateLayoutParameters() {
     
     // Calculate raw column count based on thresholds
     let columnCount;
-    if (availableWidth <= 465) {
+    if (availableWidth <= 465 || window.screen.width < 420) {
         columnCount = 1;
     } 
     else if (availableWidth <= screenQuarter * 2) {

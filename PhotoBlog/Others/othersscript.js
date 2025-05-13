@@ -38,7 +38,7 @@ function calculateLayoutParameters() {
     if (availableWidth <= 465) {
         columnCount = 1;
     } 
-    else if (availableWidth <= screenQuarter * 2) {
+    else if (availableWidth <= screenQuarter * 2 || window.screen.width < 420) {
         columnCount = 2;
     }
     else if (availableWidth <= screenQuarter * 3) {
