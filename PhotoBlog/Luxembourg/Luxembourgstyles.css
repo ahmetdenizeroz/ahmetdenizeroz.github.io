@@ -37,13 +37,31 @@ body {
 }
 
 /* Ensure 1 column on small screens */
-@media (max-width: 500px) {
+/* Mobile screens (up to 480px) */
+/*
+@media (max-width: 480px) {
+    .gallery {
+        padding: 5px;
+    }
     .gallery-item {
         position: static;
         width: 100%;
         margin: 0 0 5px 0;
     }
+    .background-gif {
+        margin: 10px auto;
+    }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .gallery {
+        padding: 10px;
+    }
+    .gallery-item {
+        position: absolute;
+    }
+}
+*/
 
 /* Modal styles */
 .modal {
