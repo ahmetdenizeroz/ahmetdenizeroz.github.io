@@ -10,14 +10,6 @@ const gap = 5; // Your existing gap value between items
 const minWidth = 0; // Minimum column width
 const maxWidth = 1000; // Maximum column width
 
-// Define galleryItemsData in global scope
-let galleryItemsData = []; // Use let to allow reassignment
-
-// Detect mobile device (simple heuristic based on screen width)
-function isMobile() {
-    return window.innerWidth <= 550; // Matches your CSS media query
-}
-
 function openModal(highResUrl) {
     modal.style.display = 'block';
     modalImage.src = highResUrl;
@@ -80,8 +72,7 @@ function calculateLayoutParameters() {
     console.log('Available:', availableWidth, 
             'Columns:', columnCount, 
             'Item Width:', itemWidth, 
-            'Required:', requiredWidth,
-            'Mobile Status:', isMobile());
+            'Required:', requiredWidth);
 
     return { columnCount, itemWidth, paddingTop, paddingBottom, paddingLeft, paddingRight};
 }
@@ -159,47 +150,6 @@ function positionItems() {
 
 // Initial positioning
 positionItems();
-
-// Handle overlay visibility on mobile scroll
-    if (isMobile()) {
-        const showOverlayOnScroll = debounce(() => {
-            const viewportHeight = window.innerHeight;
-            const viewportCenter = window.scrollY + (viewportHeight / 2);
-
-            let closestItem = null;
-            let minDistance = Infinity;
-
-            // Find item with midpoint closest to viewport center
-            galleryItemsData.forEach(item => {
-                const distance = Math.abs(item.midpoint - viewportCenter);
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestItem = item;
-                }
-            });
-
-            // Hide all overlays
-            galleryItemsData.forEach(item => {
-                item.overlay.style.display = 'none';
-                item.overlay.style.opacity = '0';
-            });
-
-            // Show overlay for closest item if within threshold (e.g., 100px)
-            if (closestItem && minDistance < 100) {
-                closestItem.overlay.style.display = 'block';
-                closestItem.overlay.style.opacity = '1';
-            }
-        }, 100);
-
-        // Run initially and on scroll
-        showOverlayOnScroll();
-        window.addEventListener('scroll', showOverlayOnScroll);
-
-        // Clean up scroll listener on resize to avoid duplicate listeners
-        window.addEventListener('resize', () => {
-            window.removeEventListener('scroll', showOverlayOnScroll);
-        });
-    }
 
 // Debounced resize handler
 window.addEventListener('resize', debounce(positionItems, 200));

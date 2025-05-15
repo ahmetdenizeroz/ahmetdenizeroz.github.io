@@ -65,7 +65,7 @@ body {
     }
 
     .gallery-item {
-        position: static;
+        position: absolute;
         width: 100%;
         margin: 0 0 5px 0;
     }
