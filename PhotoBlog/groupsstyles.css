@@ -59,7 +59,11 @@ body {
 }
 
 /* Ensure 1 column on small screens */
-@media (max-width: 500px) {
+@media (max-width: 465px) {
+    .gallery {
+        padding: 10px; /* Reduced padding for mobile */
+    }
+    
     .gallery-item {
         position: static;
         width: 100%;
