@@ -8,14 +8,14 @@ const gallery = document.querySelector('.gallery');
 //const galleryPaddingtopbot = 10; // Matches your CSS padding
 const gap = 5; // Your existing gap value between items
 const minWidth = 0; // Minimum column width
-const maxWidth = 500; // Maximum column width
+const maxWidth = 1000; // Maximum column width
 
 // Define galleryItemsData in global scope
 let galleryItemsData = []; // Use let to allow reassignment
 
 // Detect mobile device (simple heuristic based on screen width)
 function isMobile() {
-    return window.innerWidth <= 465; // Matches your CSS media query
+    return window.innerWidth <= 550; // Matches your CSS media query
 }
 
 function openModal(highResUrl) {
@@ -52,7 +52,7 @@ function calculateLayoutParameters() {
     
     // Calculate raw column count based on thresholds
     let columnCount;
-    if (availableWidth <= 465) {
+    if (availableWidth <= 700) {
         columnCount = 1;  
     } 
     else if (availableWidth <= screenQuarter * 2) {
@@ -80,7 +80,8 @@ function calculateLayoutParameters() {
     console.log('Available:', availableWidth, 
             'Columns:', columnCount, 
             'Item Width:', itemWidth, 
-            'Required:', requiredWidth);
+            'Required:', requiredWidth,
+            'Mobile Status:', isMobile());
 
     return { columnCount, itemWidth, paddingTop, paddingBottom, paddingLeft, paddingRight};
 }
