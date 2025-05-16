@@ -1,0 +1,8 @@
+const imageUrls = [
+    { lowRes: "low_res_pics/2546.JPG", highRes: "high_res_pics/2546.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3951.JPG", highRes: "high_res_pics/3951.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/Hor21.JPG", highRes: "high_res_pics/Hor21.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/Hor9.JPG", highRes: "high_res_pics/Hor9.JPG", width: 400, height: 300 },
+    { lowRes: "low_res_pics/Ver16.JPG", highRes: "high_res_pics/Ver16.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/Ver19.JPG", highRes: "high_res_pics/Ver19.JPG", width: 400, height: 532 }
+];

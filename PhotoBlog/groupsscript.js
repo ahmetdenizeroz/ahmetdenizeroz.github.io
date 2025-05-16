@@ -131,15 +131,6 @@ function positionItems() {
         galleryItem.style.left = `${left}px`;
         galleryItem.style.top = `${top}px`;
         
-        // Store item data for scroll handling
-        galleryItemsData.push({
-            element: galleryItem,
-            overlay: overlayImage,
-            top: top,
-            height: itemHeight,
-            midpoint: top + (itemHeight / 2) // Calculate vertical midpoint
-        });
-
         // Update column height
         columnHeights[shortestColumn] += itemHeight + gap;
     });

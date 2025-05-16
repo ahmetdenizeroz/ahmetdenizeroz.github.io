@@ -1,0 +1,23 @@
+const imageUrls = [
+    { lowRes: "low_res_pics/2488.JPG", highRes: "high_res_pics/2488.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/2538.JPG", highRes: "high_res_pics/2538.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3013.JPG", highRes: "high_res_pics/3013.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3210.JPG", highRes: "high_res_pics/3210.JPG", width: 400, height: 216 },
+    { lowRes: "low_res_pics/3211.JPG", highRes: "high_res_pics/3211.JPG", width: 400, height: 167 },
+    { lowRes: "low_res_pics/3212.JPG", highRes: "high_res_pics/3212.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3239.JPG", highRes: "high_res_pics/3239.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3246.JPG", highRes: "high_res_pics/3246.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3332.JPG", highRes: "high_res_pics/3332.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3335.JPG", highRes: "high_res_pics/3335.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3342.JPG", highRes: "high_res_pics/3342.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3348.JPG", highRes: "high_res_pics/3348.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3350.JPG", highRes: "high_res_pics/3350.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3353.JPG", highRes: "high_res_pics/3353.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3356.JPG", highRes: "high_res_pics/3356.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3361.JPG", highRes: "high_res_pics/3361.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3364.JPG", highRes: "high_res_pics/3364.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3409.JPG", highRes: "high_res_pics/3409.JPG", width: 400, height: 600 },
+    { lowRes: "low_res_pics/3564.JPG", highRes: "high_res_pics/3564.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/3567.JPG", highRes: "high_res_pics/3567.JPG", width: 400, height: 266 },
+    { lowRes: "low_res_pics/4243.JPG", highRes: "high_res_pics/4243.JPG", width: 400, height: 600 }
+];
