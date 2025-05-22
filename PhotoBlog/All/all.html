@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The clock ticks life away</title>
+    <link rel="stylesheet" href="all.css">
+    <script>
+        const imageUrls = [
+                { lowRes: "../Animals/low_res_pics/2488.JPG", highRes: "../Animals/high_res_pics/2488.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/2538.JPG", highRes: "../Animals/high_res_pics/2538.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3013.JPG", highRes: "../Animals/high_res_pics/3013.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3210.JPG", highRes: "../Animals/high_res_pics/3210.JPG", width: 400, height: 216 },
+                { lowRes: "../Animals/low_res_pics/3211.JPG", highRes: "../Animals/high_res_pics/3211.JPG", width: 400, height: 167 },
+                { lowRes: "../Animals/low_res_pics/3212.JPG", highRes: "../Animals/high_res_pics/3212.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3239.JPG", highRes: "../Animals/high_res_pics/3239.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3246.JPG", highRes: "../Animals/high_res_pics/3246.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3332.JPG", highRes: "../Animals/high_res_pics/3332.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3335.JPG", highRes: "../Animals/high_res_pics/3335.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3342.JPG", highRes: "../Animals/high_res_pics/3342.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3348.JPG", highRes: "../Animals/high_res_pics/3348.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3350.JPG", highRes: "../Animals/high_res_pics/3350.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3353.JPG", highRes: "../Animals/high_res_pics/3353.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3356.JPG", highRes: "../Animals/high_res_pics/3356.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3361.JPG", highRes: "../Animals/high_res_pics/3361.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3364.JPG", highRes: "../Animals/high_res_pics/3364.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3409.JPG", highRes: "../Animals/high_res_pics/3409.JPG", width: 400, height: 600 },
+                { lowRes: "../Animals/low_res_pics/3564.JPG", highRes: "../Animals/high_res_pics/3564.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/3567.JPG", highRes: "../Animals/high_res_pics/3567.JPG", width: 400, height: 266 },
+                { lowRes: "../Animals/low_res_pics/4243.JPG", highRes: "../Animals/high_res_pics/4243.JPG", width: 400, height: 600 },
+                { lowRes: "../Frankfurt/low_res_pics/2396.JPG", highRes: "../Frankfurt/high_res_pics/2396.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/2423.JPG", highRes: "../Frankfurt/high_res_pics/2423.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/2449.JPG", highRes: "../Frankfurt/high_res_pics/2449.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/2474.JPG", highRes: "../Frankfurt/high_res_pics/2474.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/2481.JPG", highRes: "../Frankfurt/high_res_pics/2481.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/2503.JPG", highRes: "../Frankfurt/high_res_pics/2503.JPG", width: 400, height: 600 },
+                { lowRes: "../Frankfurt/low_res_pics/2508.JPG", highRes: "../Frankfurt/high_res_pics/2508.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/4168.JPG", highRes: "../Frankfurt/high_res_pics/4168.JPG", width: 400, height: 600 },
+                { lowRes: "../Frankfurt/low_res_pics/4210.JPG", highRes: "../Frankfurt/high_res_pics/4210.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/4213.JPG", highRes: "../Frankfurt/high_res_pics/4213.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/4222.JPG", highRes: "../Frankfurt/high_res_pics/4222.JPG", width: 400, height: 600 },
+                { lowRes: "../Frankfurt/low_res_pics/4225.JPG", highRes: "../Frankfurt/high_res_pics/4225.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/DSCF4085.png", highRes: "../Frankfurt/high_res_pics/DSCF4085.png", width: 400, height: 196 },
+                { lowRes: "../Frankfurt/low_res_pics/DSCF4098.png", highRes: "../Frankfurt/high_res_pics/DSCF4098.png", width: 400, height: 167 },
+                { lowRes: "../Frankfurt/low_res_pics/Hor10.JPG", highRes: "../Frankfurt/high_res_pics/Hor10.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/Hor22.JPG", highRes: "../Frankfurt/high_res_pics/Hor22.JPG", width: 400, height: 266 },
+                { lowRes: "../Frankfurt/low_res_pics/Ver4.JPG", highRes: "../Frankfurt/high_res_pics/Ver4.JPG", width: 400, height: 600 },
+                { lowRes: "../Frankfurt/low_res_pics/Ver5.JPG", highRes: "../Frankfurt/high_res_pics/Ver5.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2517.JPG", highRes: "../Luxembourg/high_res_pics/2517.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2523.JPG", highRes: "../Luxembourg/high_res_pics/2523.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/2543.JPG", highRes: "../Luxembourg/high_res_pics/2543.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2545.JPG", highRes: "../Luxembourg/high_res_pics/2545.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2589.JPG", highRes: "../Luxembourg/high_res_pics/2589.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/2597.JPG", highRes: "../Luxembourg/high_res_pics/2597.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2601.JPG", highRes: "../Luxembourg/high_res_pics/2601.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/2609.JPG", highRes: "../Luxembourg/high_res_pics/2609.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/2614.JPG", highRes: "../Luxembourg/high_res_pics/2614.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/2759.JPG", highRes: "../Luxembourg/high_res_pics/2759.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor11.JPG", highRes: "../Luxembourg/high_res_pics/Hor11.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor12.JPG", highRes: "../Luxembourg/high_res_pics/Hor12.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor13.JPG", highRes: "../Luxembourg/high_res_pics/Hor13.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor14.JPG", highRes: "../Luxembourg/high_res_pics/Hor14.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor15.JPG", highRes: "../Luxembourg/high_res_pics/Hor15.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor16.JPG", highRes: "../Luxembourg/high_res_pics/Hor16.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor23.JPG", highRes: "../Luxembourg/high_res_pics/Hor23.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor24.JPG", highRes: "../Luxembourg/high_res_pics/Hor24.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Hor26.JPG", highRes: "../Luxembourg/high_res_pics/Hor26.JPG", width: 400, height: 266 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver10.JPG", highRes: "../Luxembourg/high_res_pics/Ver10.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver11.JPG", highRes: "../Luxembourg/high_res_pics/Ver11.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver12.JPG", highRes: "../Luxembourg/high_res_pics/Ver12.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver13.JPG", highRes: "../Luxembourg/high_res_pics/Ver13.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver14.JPG", highRes: "../Luxembourg/high_res_pics/Ver14.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver15.JPG", highRes: "../Luxembourg/high_res_pics/Ver15.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver17.JPG", highRes: "../Luxembourg/high_res_pics/Ver17.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver2.JPG", highRes: "../Luxembourg/high_res_pics/Ver2.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver6.JPG", highRes: "../Luxembourg/high_res_pics/Ver6.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver7.JPG", highRes: "../Luxembourg/high_res_pics/Ver7.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver8.JPG", highRes: "../Luxembourg/high_res_pics/Ver8.JPG", width: 400, height: 600 },
+                { lowRes: "../Luxembourg/low_res_pics/Ver9.JPG", highRes: "../Luxembourg/high_res_pics/Ver9.JPG", width: 400, height: 600 },
+                { lowRes: "../Objects/low_res_pics/2546.JPG", highRes: "../Objects/high_res_pics/2546.JPG", width: 400, height: 266 },
+                { lowRes: "../Objects/low_res_pics/3951.JPG", highRes: "../Objects/high_res_pics/3951.JPG", width: 400, height: 266 },
+                { lowRes: "../Objects/low_res_pics/Hor21.JPG", highRes: "../Objects/high_res_pics/Hor21.JPG", width: 400, height: 266 },
+                { lowRes: "../Objects/low_res_pics/Hor9.JPG", highRes: "../Objects/high_res_pics/Hor9.JPG", width: 400, height: 300 },
+                { lowRes: "../Objects/low_res_pics/Ver16.JPG", highRes: "../Objects/high_res_pics/Ver16.JPG", width: 400, height: 600 },
+                { lowRes: "../Objects/low_res_pics/Ver19.JPG", highRes: "../Objects/high_res_pics/Ver19.JPG", width: 400, height: 532 },
+                { lowRes: "../Others/low_res_pics/2244.JPG", highRes: "../Others/high_res_pics/2244.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2245.JPG", highRes: "../Others/high_res_pics/2245.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2279.JPG", highRes: "../Others/high_res_pics/2279.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2281.JPG", highRes: "../Others/high_res_pics/2281.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2313.JPG", highRes: "../Others/high_res_pics/2313.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2318.JPG", highRes: "../Others/high_res_pics/2318.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/239-1.png", highRes: "../Others/high_res_pics/239-1.png", width: 400, height: 167 },
+                { lowRes: "../Others/low_res_pics/2406.JPG", highRes: "../Others/high_res_pics/2406.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2552.JPG", highRes: "../Others/high_res_pics/2552.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/2839.JPG", highRes: "../Others/high_res_pics/2839.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/2932.JPG", highRes: "../Others/high_res_pics/2932.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/3430.JPG", highRes: "../Others/high_res_pics/3430.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/3458.JPG", highRes: "../Others/high_res_pics/3458.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/3474.JPG", highRes: "../Others/high_res_pics/3474.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/3654.JPG", highRes: "../Others/high_res_pics/3654.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/3662.JPG", highRes: "../Others/high_res_pics/3662.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/3870.JPG", highRes: "../Others/high_res_pics/3870.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/3979.JPG", highRes: "../Others/high_res_pics/3979.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4066.JPG", highRes: "../Others/high_res_pics/4066.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/4331.JPG", highRes: "../Others/high_res_pics/4331.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4353.JPG", highRes: "../Others/high_res_pics/4353.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/4362.JPG", highRes: "../Others/high_res_pics/4362.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/4388.JPG", highRes: "../Others/high_res_pics/4388.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4396.JPG", highRes: "../Others/high_res_pics/4396.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4404.JPG", highRes: "../Others/high_res_pics/4404.JPG", width: 400, height: 237 },
+                { lowRes: "../Others/low_res_pics/4408.JPG", highRes: "../Others/high_res_pics/4408.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4415.JPG", highRes: "../Others/high_res_pics/4415.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/4440.JPG", highRes: "../Others/high_res_pics/4440.JPG", width: 400, height: 184 },
+                { lowRes: "../Others/low_res_pics/4478.JPG", highRes: "../Others/high_res_pics/4478.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/DSCF4238.png", highRes: "../Others/high_res_pics/DSCF4238.png", width: 400, height: 167 },
+                { lowRes: "../Others/low_res_pics/DSCF4249.png", highRes: "../Others/high_res_pics/DSCF4249.png", width: 400, height: 175 },
+                { lowRes: "../Others/low_res_pics/Hor1.JPG", highRes: "../Others/high_res_pics/Hor1.JPG", width: 400, height: 300 },
+                { lowRes: "../Others/low_res_pics/Hor17.png", highRes: "../Others/high_res_pics/Hor17.png", width: 400, height: 300 },
+                { lowRes: "../Others/low_res_pics/Hor18.JPG", highRes: "../Others/high_res_pics/Hor18.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/Hor19.JPG", highRes: "../Others/high_res_pics/Hor19.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor2.JPG", highRes: "../Others/high_res_pics/Hor2.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor20.JPG", highRes: "../Others/high_res_pics/Hor20.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/Hor25.JPG", highRes: "../Others/high_res_pics/Hor25.JPG", width: 400, height: 266 },
+                { lowRes: "../Others/low_res_pics/Hor3.JPG", highRes: "../Others/high_res_pics/Hor3.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor4.JPG", highRes: "../Others/high_res_pics/Hor4.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor5.JPG", highRes: "../Others/high_res_pics/Hor5.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor6.JPG", highRes: "../Others/high_res_pics/Hor6.JPG", width: 400, height: 265 },
+                { lowRes: "../Others/low_res_pics/Hor7.JPG", highRes: "../Others/high_res_pics/Hor7.JPG", width: 400, height: 300 },
+                { lowRes: "../Others/low_res_pics/Hor8.JPG", highRes: "../Others/high_res_pics/Hor8.JPG", width: 400, height: 300 },
+                { lowRes: "../Others/low_res_pics/Ver1.JPG", highRes: "../Others/high_res_pics/Ver1.JPG", width: 400, height: 532 },
+                { lowRes: "../Others/low_res_pics/Ver18.JPG", highRes: "../Others/high_res_pics/Ver18.JPG", width: 400, height: 532 },
+                { lowRes: "../Others/low_res_pics/Ver20.JPG", highRes: "../Others/high_res_pics/Ver20.JPG", width: 400, height: 600 },
+                { lowRes: "../Others/low_res_pics/Ver3.JPG", highRes: "../Others/high_res_pics/Ver3.JPG", width: 400, height: 603 }
+
+        ];
+    </script>
+</head>
+<body>
+    <audio controls autoplay>
+        <source src="Mass Effect 3 - I'm Proud Of You (Extended Version).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+<!--    <img src="Video/3.gif" class="background-gif" alt="Background GIF"> -->
+
+    <div class="gallery">
+        <!-- Images populated by script.js -->
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close-modal">×</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="all.js"></script>
+</body>
+</html>
